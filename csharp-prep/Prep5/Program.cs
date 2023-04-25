@@ -16,8 +16,7 @@ class Program
 
         static int PromptUserNumber() {
             Console.Write("Please enter your favorite number: ");
-            string userInput = Console.ReadLine();
-            int userNumber = int.Parse(userInput);
+            int userNumber = Convert.ToInt32(Console.ReadLine());
             return userNumber;
         }
 
