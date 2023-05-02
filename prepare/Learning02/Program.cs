@@ -23,7 +23,6 @@ class Program
         ta._name = "Treven Amidan";
         ta._jobs.Add(job1);
         ta._jobs.Add(job2);
-        Console.WriteLine(ta._jobs[0]._jobTitle);
 
         ta.Display();
     }
