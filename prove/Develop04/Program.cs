@@ -4,6 +4,9 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Develop04 World!");
+        Journal journal = new Journal();
+        journal.NewEntry();
+        journal.NewEntry();
+        journal.SaveJournal("journal.txt");
     }
 }
