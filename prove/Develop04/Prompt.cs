@@ -2,6 +2,7 @@ public class Prompt {
     public List<string> _prompts;
 
     public Prompt(){
+        _prompts = new List<string>();
         _prompts.Add("How was your day?");
         _prompts.Add("Describe what you did today");
         _prompts.Add("What did you eat today?");

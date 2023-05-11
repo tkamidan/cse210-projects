@@ -1,7 +1,8 @@
-public class Entry {
-    
-    Prompt _pmt = new Prompt();
-    public string pmt;
+using System;
+
+public class Entry
+{
+    public string _pmt;
     public string _date;
     public string _time;
     public string _location;
@@ -9,34 +10,44 @@ public class Entry {
     public string _title;
     public string _text;
 
-
     public Entry(string location, string emotion, string title = "", string text = "", string prompt = "", string date = "", string time = "")
     {
-        if (prompt == "") {
-            pmt = _pmt.GetRandomPrompt();
-        } else {
-            pmt = prompt;
+        Prompt pmt = new Prompt();
+
+        if (string.IsNullOrEmpty(prompt))
+        {
+            _pmt = pmt.GetRandomPrompt();
         }
-        if (date == "" && time == "") {
+        else
+        {
+            _pmt = prompt;
+        }
+
+        if (string.IsNullOrEmpty(date) && string.IsNullOrEmpty(time))
+        {
             DateTime currentDateTime = DateTime.Now;
-            string _date = currentDateTime.ToString("MMMM dd, yyyy");
-            string _time = currentDateTime.ToString("hh:mm:ss tt");
-        } else {
+            _date = currentDateTime.ToString("MMMM dd, yyyy");
+            _time = currentDateTime.ToString("hh:mm:ss tt");
+        }
+        else
+        {
             _date = date;
             _time = time;
         }
+
         _location = location;
         _emotion = emotion;
         _title = title;
         _text = text;
     }
 
-    public void Display(){
-        Console.Write(_date);
+    public void Display()
+    {
+        Console.WriteLine(_date);
         Console.WriteLine(_time);
         Console.WriteLine(_location);
         Console.WriteLine();
-        Console.WriteLine(pmt);
+        Console.WriteLine(_pmt);
         Console.WriteLine($"Today I am feeling {_emotion}!");
         Console.WriteLine();
         string line = "------------------------------------------------------------------------------------------";
@@ -47,7 +58,8 @@ public class Entry {
         Console.WriteLine(line);
     }
 
-    public string GetPrompt() {
-        return pmt;
+    public string GetPrompt()
+    {
+        return _pmt;
     }
 }

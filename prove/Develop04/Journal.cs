@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using System.IO; 
 
 public class Journal {
@@ -5,7 +7,7 @@ public class Journal {
 
 
     public Journal() {
-
+        _entries = new List<Entry>();
     }
 
     public void ShowAllEntries() {
@@ -20,7 +22,7 @@ public class Journal {
         Console.Write("How are you feeling right now? ");
         string emotion = Console.ReadLine();
         Entry newEntry = new Entry(location, emotion);
-        Console.WriteLine($"The prompt is: {newEntry.pmt}");
+        Console.WriteLine($"The prompt is: {newEntry._pmt}");
         Console.WriteLine("Please type in your response:");
         string response = Console.ReadLine();
         newEntry._text = response;
@@ -51,8 +53,14 @@ public class Journal {
     public void SaveJournal(string fileName) {
         using (StreamWriter outputfile = new StreamWriter(fileName)) {
             foreach (Entry entry in _entries) {
-                outputfile.WriteLine($"{entry.pmt}|{entry._date}|{entry._time}|{entry._location}|{entry._emotion}|{entry._title}|{entry._text}");
+                outputfile.WriteLine($"{entry._pmt}|{entry._date}|{entry._time}|{entry._location}|{entry._emotion}|{entry._title}|{entry._text}");
             }
         }
+    }
+
+    public void ShowRandomEntry() {
+        var random = new Random();
+        var randomNumber = random.Next(0, _entries.Count);
+        _entries[randomNumber].Display();
     }
 }
