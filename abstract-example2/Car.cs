@@ -1,14 +1,11 @@
 public class Car {
     // instances 
-    public string brand;
+    public string brand = "";
     public int miles;
-    public string color;
+    public string color = "";
 
 
     // constructor
-    public Car(){
-
-    }
 
 
     // methods (functions)
