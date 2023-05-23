@@ -1,11 +1,11 @@
 public class Match {
     private Team _winningTeam;
-    private Team _lossingTeam;
+    private Team _losingTeam;
 
     public Match(Team winningTeam, Team losingTeam){
         _winningTeam = winningTeam;
         _winningTeam.AddWin();
-        _lossingTeam = _lossingTeam;
-        _lossingTeam.AddLoss();
+        _losingTeam = losingTeam;
+        _losingTeam.AddLoss();
     }
 }
