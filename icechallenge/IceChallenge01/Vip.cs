@@ -4,12 +4,12 @@ public class Vip:Elevator{
     
     public Vip()
     {
-        _floor.add(31);
+        _floor.Add(31);
     }
 
     public void security(){
         Console.Write("Password");
-        string answer = console.ReadLine();
+        string? answer = Console.ReadLine();
         if (answer == _password){
             _access = true;
         }
@@ -17,10 +17,14 @@ public class Vip:Elevator{
             _access = false;
         }
         
-        currentFloor = Elevator.getFloor();
+        int currentFloor = GetFloorNumber();
 
 
 
+    }
+
+    public string GetPassword() {
+        return _password;
     }
 
 }
