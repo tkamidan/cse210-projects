@@ -1,3 +1,6 @@
-This user has 400 points.
+This user has 1500 points.
 Negative|Going to bed late|You went to bed late|100|1
 Eternal|Read scriptures|You read your scriptures|500|1
+Eternal|Pray|Say your prayers|20|10
+Checklist|Go to the temple|Go to the temple|400|1|5|100
+Simple|Vacuum|Vacuum the house|500|True
