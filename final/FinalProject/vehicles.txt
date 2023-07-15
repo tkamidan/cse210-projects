@@ -1,0 +1,12 @@
+Car,Model X,Deep Blue,Tesla,70,True,2022,4WD
+Bicycle,500.2 eBike,Yellow,Pace,10,False,2023,Adult,True
+Boat,AR220,Blue,Yamaha,50,True,2023,Tow In,Category B
+Car,Optima LX,Sangria,Kia,25,False,2018,FWD
+Car,WRX STI Limited,Ice Silver Metallic,Subaru,30,False,2016,AWD
+Car,Taurus SEL,Sterling Gray Metallic,Ford,20,False,2014,AWD
+Bicycle,CF SLX 8 Disc Di2,Black,Aeroad,15,False,2023,Adult,False
+Bicycle,20" Kids Bike,Bluebird,Koda,3,False,2023,Kids,False
+Bicycle,Mini 16" Kids' Bike,Pink,Beaumont,3,False,2023,Kids,True
+Boat,Aero 10′ Classic Seafoam Inflatable Kayak,Light Blue,Zeppelin,5,False,2023,Kayak,Paddle
+Boat,JetBoat 210 Series,Gray,Yamaha,10,False,2023,Tow In,N/A
+Boat,Seahawk 4,Green,Intex,2,False,2023,Raft,Inflatable

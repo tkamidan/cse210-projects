@@ -1,11 +1,11 @@
 public abstract class Vehicle : IFileable {
-    private string _name;
-    private string _color;
-    private string _manufacturer;
-    private double _pricePerDay;
-    private bool _isRented = false;
-    private string _rented;
-    private string _year;
+    protected string _name;
+    protected string _color;
+    protected string _manufacturer;
+    protected double _pricePerDay;
+    protected bool _isRented = false;
+    protected string _rented;
+    protected string _year;
 
     public Vehicle() {
 
@@ -45,5 +45,17 @@ public abstract class Vehicle : IFileable {
 
     public void Rent() {
         _isRented = true;
+    }
+
+    public void Return() {
+        _isRented = false;
+    }
+
+    public double GetPricePerDay() {
+        return _pricePerDay;
+    }
+
+    public bool GetIsRented() {
+        return _isRented;
     }
 }

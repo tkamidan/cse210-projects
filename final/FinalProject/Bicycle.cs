@@ -19,16 +19,23 @@ public class Bicycle : Vehicle {
         else {
             _basketYesNo = "No";
         }
-        Console.WriteLine($"\nSize: {_size}\nBasket: {_basketYesNo}");
+        Console.WriteLine($"\nVehicle Type: Bicycle\nSize: {_size}\nBasket: {_basketYesNo}");
     }
 
     
     public override string Stringify()
     {
-        throw new NotImplementedException();
+        return $"Bicycle,{_name},{_color},{_manufacturer},{_pricePerDay},{_isRented},{_year},{_size},{_basket}";
     }
-    public override void CreateFromList()
+    public override void CreateFromList(string[] list)
     {
-        throw new NotImplementedException();
+        _name = list[1];
+        _color = list[2];
+        _manufacturer = list[3];
+        _pricePerDay = double.Parse(list[4]);
+        _isRented = bool.Parse(list[5]);
+        _year = list[6];
+        _size = list[7];
+        _basket = bool.Parse(list[8]);
     }
 }

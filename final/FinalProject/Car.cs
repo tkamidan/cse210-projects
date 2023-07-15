@@ -11,7 +11,7 @@ public class Car : Vehicle {
     public override void Display()
     {
         base.Display();
-        Console.WriteLine($"\nWheel Drive: {_wheelDrive}");
+        Console.WriteLine($"\nVehicle Type: Car\nWheel Drive: {_wheelDrive}");
     }
     public override void SetVehicle()
     {
@@ -21,10 +21,16 @@ public class Car : Vehicle {
     }
     public override string Stringify()
     {
-        throw new NotImplementedException();
+        return $"Car,{_name},{_color},{_manufacturer},{_pricePerDay},{_isRented},{_year},{_wheelDrive}";
     }
-    public override void CreateFromList()
+    public override void CreateFromList(string[] list)
     {
-        throw new NotImplementedException();
+        _name = list[1];
+        _color = list[2];
+        _manufacturer = list[3];
+        _pricePerDay = double.Parse(list[4]);
+        _isRented = bool.Parse(list[5]);
+        _year = list[6];
+        _wheelDrive = list[7];
     }
 }
